@@ -3,8 +3,56 @@ Computational Thinking with Python
 
 This repository is a two-week, notebook-driven curriculum to practice computational thinking with Python. The path is divided into beginner, intermediate, and advanced tracks, each with clear tasks and validation tests inside the notebooks so learners get immediate feedback.
 
-Quick start
------------
+🚀 Launch in the Cloud (No Installation Required!)
+--------------------------------------------------
+
+The fastest way to start learning - click and code in your browser with zero setup:
+
+### Option 1: Binder (Recommended for Quick Start)
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/main?labpath=notebooks%2Fbeginner%2F01_python_basics.ipynb)
+
+Click the badge above to launch an interactive Jupyter environment.
+
+**What to expect:**
+- First launch takes 2-3 minutes to build the environment (subsequent launches are faster)
+- Everything runs in your browser - no installation needed
+- All notebooks and validation tests work perfectly
+- ⚠️ **Important:** Your work is NOT saved automatically. Download notebooks before closing!
+
+**Individual notebook launches:**
+
+| Module | Notebook | Launch |
+|--------|----------|--------|
+| Beginner | 01 - Python Basics | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/main?labpath=notebooks%2Fbeginner%2F01_python_basics.ipynb) |
+| Beginner | 02 - Decomposition & Control Flow | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/main?labpath=notebooks%2Fbeginner%2F02_decomposition_control.ipynb) |
+| Intermediate | 01 - Data Structures & Complexity | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/main?labpath=notebooks%2Fintermediate%2F01_data_structures_complexity.ipynb) |
+| Intermediate | 02 - Recursion & Search | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/main?labpath=notebooks%2Fintermediate%2F02_recursion_search.ipynb) |
+| Advanced | 01 - Algorithm Design & Graphs | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/main?labpath=notebooks%2Fadvanced%2F01_algorithm_design.ipynb) |
+| Advanced | 02 - Experiments & Evaluation | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/main?labpath=notebooks%2Fadvanced%2F02_experiments_evaluation.ipynb) |
+
+### Option 2: Google Colab (For Saving Your Progress)
+
+If you need to save your work across multiple sessions, use Google Colab (requires a free Google account):
+
+1. Go to [Google Colab](https://colab.research.google.com/)
+2. Click **File → Open Notebook → GitHub tab**
+3. Enter repository: `Sakeeb91/computational-thinking-with-python`
+4. Select a notebook to open
+5. **Important:** Add this setup cell at the top and run it first:
+
+```python
+# Run this cell first to set up the environment
+!git clone https://github.com/Sakeeb91/computational-thinking-with-python.git
+import sys
+sys.path.append('/content/computational-thinking-with-python')
+```
+
+6. Now you can run the rest of the notebook normally
+7. Your work automatically saves to Google Drive
+
+Quick start (Local Installation)
+---------------------------------
 - Install Python 3.10+.
 - Create a virtual environment: `python -m venv .venv && source .venv/bin/activate` (Windows: `.venv\\Scripts\\activate`).
 - Install tools: `pip install -r requirements.txt`.
