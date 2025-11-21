@@ -10,7 +10,7 @@ The fastest way to start learning - click and code in your browser with zero set
 
 ### Option 1: Binder (Recommended for Quick Start)
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/main?labpath=notebooks%2Fbeginner%2F01_python_basics.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/HEAD?urlpath=lab/tree/notebooks/beginner/01_python_basics.ipynb)
 
 Click the badge above to launch an interactive Jupyter environment.
 
@@ -24,12 +24,12 @@ Click the badge above to launch an interactive Jupyter environment.
 
 | Module | Notebook | Launch |
 |--------|----------|--------|
-| Beginner | 01 - Python Basics | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/main?labpath=notebooks%2Fbeginner%2F01_python_basics.ipynb) |
-| Beginner | 02 - Decomposition & Control Flow | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/main?labpath=notebooks%2Fbeginner%2F02_decomposition_control.ipynb) |
-| Intermediate | 01 - Data Structures & Complexity | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/main?labpath=notebooks%2Fintermediate%2F01_data_structures_complexity.ipynb) |
-| Intermediate | 02 - Recursion & Search | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/main?labpath=notebooks%2Fintermediate%2F02_recursion_search.ipynb) |
-| Advanced | 01 - Algorithm Design & Graphs | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/main?labpath=notebooks%2Fadvanced%2F01_algorithm_design.ipynb) |
-| Advanced | 02 - Experiments & Evaluation | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/main?labpath=notebooks%2Fadvanced%2F02_experiments_evaluation.ipynb) |
+| Beginner | 01 - Python Basics | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/HEAD?urlpath=lab/tree/notebooks/beginner/01_python_basics.ipynb) |
+| Beginner | 02 - Decomposition & Control Flow | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/HEAD?urlpath=lab/tree/notebooks/beginner/02_decomposition_control.ipynb) |
+| Intermediate | 01 - Data Structures & Complexity | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/HEAD?urlpath=lab/tree/notebooks/intermediate/01_data_structures_complexity.ipynb) |
+| Intermediate | 02 - Recursion & Search | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/HEAD?urlpath=lab/tree/notebooks/intermediate/02_recursion_search.ipynb) |
+| Advanced | 01 - Algorithm Design & Graphs | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/HEAD?urlpath=lab/tree/notebooks/advanced/01_algorithm_design.ipynb) |
+| Advanced | 02 - Experiments & Evaluation | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Sakeeb91/computational-thinking-with-python/HEAD?urlpath=lab/tree/notebooks/advanced/02_experiments_evaluation.ipynb) |
 
 ### Option 2: Google Colab (For Saving Your Progress)
 
