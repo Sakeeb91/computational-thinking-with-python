@@ -65,6 +65,7 @@ def base_setup_cells(title: str, description: str) -> List[Dict[str, Any]]:
             **How to use this notebook**
 
             - Read the problem and the step-by-step hints first. They are written for a motivated first-time coder.
+            - Look for **Show/hide** sections; click to reveal extra guidance or answers when you feel stuck.
             - Write your solution code directly below each TODO, keeping functions short and clear.
             - Run the tests cell; if something fails, re-read the hint and add small `print` checks to see what is happening.
             - When all checks pass, add one or two of your own test cases to prove you really understand it.
@@ -147,6 +148,13 @@ def beginner_python_basics() -> None:
                 raise NotImplementedError
             """
         ),
+        md_cell(
+            """
+            ### Checkpoint — get quick wins
+
+            Run the next cell. Each `[PASS]` is a dopamine hit. If something fails, reread the hint and add a `print` to see intermediate values.
+            """
+        ),
         code_cell(
             """
             reset()
@@ -159,6 +167,26 @@ def beginner_python_basics() -> None:
             check_equal("running_totals negatives", running_totals([5, -2, 7]), [5, 3, 10])
             check_equal("count_vowels", count_vowels("Computational Thinking"), 8)
             summary()
+            """
+        ),
+        md_cell(
+            """
+            ### Interview warm-up (click to reveal answers)
+
+            <details>
+            <summary>How would you describe a function to someone new to code?</summary>
+            A named mini-machine: you give it inputs, it performs steps, and hands back an output. Good functions do one clear job.
+            </details>
+
+            <details>
+            <summary>When would you choose a <code>for</code> loop over <code>while</code>?</summary>
+            Use a <code>for</code> loop when you know the collection or number of steps ahead of time; use <code>while</code> for open-ended repetition until a condition changes.
+            </details>
+
+            <details>
+            <summary>Why convert text to lowercase before counting vowels?</summary>
+            To make the check case-insensitive, so 'A' and 'a' are both counted without duplicating logic.
+            </details>
             """
         ),
     ]
@@ -246,6 +274,13 @@ def beginner_decomposition_control() -> None:
                 raise NotImplementedError
             """
         ),
+        md_cell(
+            """
+            ### Checkpoint — run and reflect
+
+            Run the next cell to see passes/fails. If something breaks, add a quick `print` inside your function to see what's happening before and after each branch.
+            """
+        ),
         code_cell(
             """
             reset()
@@ -261,6 +296,26 @@ def beginner_decomposition_control() -> None:
             check_equal("estimate_timeline", estimate_timeline(schedule), 35)
             check_equal("estimate_timeline solo", estimate_timeline([{"name": "solo", "time": 4, "parallelizable": False}]), 4)
             summary()
+            """
+        ),
+        md_cell(
+            """
+            ### Interview warm-up (click to reveal answers)
+
+            <details>
+            <summary>What does decomposition mean in problem solving?</summary>
+            Breaking a big, fuzzy problem into small, crisp steps you can solve and test independently.
+            </details>
+
+            <details>
+            <summary>How do you decide between <code>if/elif/else</code> and a lookup table (dict)?</summary>
+            Use <code>if/elif/else</code> for a few simple branches; use a dict mapping keys to actions/data when you have many cases and want quick lookups.
+            </details>
+
+            <details>
+            <summary>Why track parallelizable vs non-parallelizable work separately?</summary>
+            Because overlapping tasks shouldn't be double-counted; splitting them lets you add serial time and only the longest parallel block once.
+            </details>
             """
         ),
     ]
@@ -345,6 +400,13 @@ def intermediate_data_structures() -> None:
                 raise NotImplementedError
             """
         ),
+        md_cell(
+            """
+            ### Checkpoint — test and tune
+
+            The next cell runs quick checks. If a test fails, print intermediate variables (like your dictionary or indices) to see where your reasoning differs from the expected behavior.
+            """
+        ),
         code_cell(
             """
             reset()
@@ -360,6 +422,26 @@ def intermediate_data_structures() -> None:
             check_equal("merge_sorted simple", merge_sorted([1, 3, 5], [2, 4, 6]), [1, 2, 3, 4, 5, 6])
             check_equal("merge_sorted duplicates", merge_sorted([1, 2, 2], [2, 3]), [1, 2, 2, 2, 3])
             summary()
+            """
+        ),
+        md_cell(
+            """
+            ### Interview warm-up (click to reveal answers)
+
+            <details>
+            <summary>Why does a dict-based two-sum check run in O(n)?</summary>
+            Each lookup and insert in a dict is expected O(1), so you pass through the list once.
+            </details>
+
+            <details>
+            <summary>How would you handle punctuation and case when counting words?</summary>
+            Normalize first: lowercase the text, strip or replace punctuation with spaces, then split and count.
+            </details>
+
+            <details>
+            <summary>How can you merge two sorted lists without resorting to full re-sort?</summary>
+            Walk both lists with indices, always taking the smaller next item; this is linear time because you never backtrack.
+            </details>
             """
         ),
     ]
@@ -440,6 +522,13 @@ def intermediate_recursion_search() -> None:
                 raise NotImplementedError
             """
         ),
+        md_cell(
+            """
+            ### Checkpoint — trace your recursion/search
+
+            Run the next cell. If something fails, add prints to show arguments at each recursive call or the contents of your stack/queue to see where the exploration goes.
+            """
+        ),
         code_cell(
             """
             reset()
@@ -461,6 +550,26 @@ def intermediate_recursion_search() -> None:
             check_true("path_exists reachable", path_exists(grid1, (0, 0), (2, 2)))
             check_true("path_exists blocked", not path_exists(grid2, (0, 0), (1, 1)))
             summary()
+            """
+        ),
+        md_cell(
+            """
+            ### Interview warm-up (click to reveal answers)
+
+            <details>
+            <summary>What is the base case in a recursive function?</summary>
+            A stopping condition that returns a direct answer without further recursion, preventing infinite descent.
+            </details>
+
+            <details>
+            <summary>How do you avoid revisiting nodes in a DFS/BFS?</summary>
+            Keep a `visited` set; mark nodes as visited when you add them to the stack/queue so you never enqueue the same position twice.
+            </details>
+
+            <details>
+            <summary>Why might memoization help in the grid paths problem?</summary>
+            Many subproblems repeat (same `rows, cols`), so caching previous answers avoids exponential re-computation.
+            </details>
             """
         ),
     ]
@@ -546,6 +655,13 @@ def advanced_algorithm_design() -> None:
                 raise NotImplementedError
             """
         ),
+        md_cell(
+            """
+            ### Checkpoint — verify ordering and paths
+
+            Run the next cell. If something fails, print your indegree table for topo sort or the queue contents for BFS to see where logic diverges.
+            """
+        ),
         code_cell(
             """
             reset()
@@ -571,6 +687,26 @@ def advanced_algorithm_design() -> None:
             ]
             check_equal("schedule_by_deadline", schedule_by_deadline(tasks), ["B", "C", "A"])
             summary()
+            """
+        ),
+        md_cell(
+            """
+            ### Interview warm-up (click to reveal answers)
+
+            <details>
+            <summary>How do you detect a cycle in topological sorting?</summary>
+            If you process nodes with indegree 0 and the final ordering has fewer nodes than the graph, a cycle prevented some nodes from ever reaching indegree 0.
+            </details>
+
+            <details>
+            <summary>Why does BFS give shortest path length in an unweighted grid?</summary>
+            BFS explores in layers by distance; the first time you reach the goal is guaranteed to be the minimum number of steps.
+            </details>
+
+            <details>
+            <summary>What is a greedy choice in scheduling by deadline?</summary>
+            Always pick the available task with the earliest deadline (and shorter duration on ties) to minimize lateness locally, which leads to a good global order here.
+            </details>
             """
         ),
     ]
@@ -656,6 +792,13 @@ def advanced_experiments_evaluation() -> None:
                 raise NotImplementedError
             """
         ),
+        md_cell(
+            """
+            ### Checkpoint — sanity-check randomness and metrics
+
+            Run the next cell. If something fails, print sample counts or the running window to see whether your math aligns with the intended formulas.
+            """
+        ),
         code_cell(
             """
             reset()
@@ -676,6 +819,26 @@ def advanced_experiments_evaluation() -> None:
             check_true("conversion_lift values", abs(result["rate_A"] - 0.5) < 1e-9 and abs(result["rate_B"] - (2 / 3)) < 1e-9)
             check_true("conversion_lift lift", abs(result["lift"] - (2 / 3 - 0.5)) < 1e-9)
             summary()
+            """
+        ),
+        md_cell(
+            """
+            ### Interview warm-up (click to reveal answers)
+
+            <details>
+            <summary>Why set a random seed in simulations?</summary>
+            It makes results repeatable so you can debug and compare runs reliably.
+            </details>
+
+            <details>
+            <summary>How would you explain a rolling mean to a stakeholder?</summary>
+            It's the average of the most recent N values, updating as new data arrives, which smooths noise while staying up to date.
+            </details>
+
+            <details>
+            <summary>What is conversion lift?</summary>
+            The difference in conversion rates between variant B and A; a positive lift means B outperforms A.
+            </details>
             """
         ),
     ]
