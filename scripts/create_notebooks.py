@@ -49,6 +49,7 @@ def base_setup_cells(title: str, description: str) -> List[Dict[str, Any]]:
         md_cell(f"# {title}\n\n{description}"),
         code_cell(
             """
+            # Setup: add project root so we can import shared helpers across notebooks.
             import os
             import sys
 
@@ -131,20 +132,20 @@ def beginner_python_basics() -> None:
         code_cell(
             """
             def clean_temperature_readings(readings):
-                \"\"\"Remove sentinel values and convert the rest to floats.\"\"\"
-                # TODO: implement
+                \"\"\"Remove sentinel values and convert the rest to floats to keep only usable data in original order.\"\"\"
+                # TODO: implement following the step-by-step hint above
                 raise NotImplementedError
 
 
             def running_totals(numbers):
-                \"\"\"Return cumulative sums for all positions in the list.\"\"\"
-                # TODO: implement
+                \"\"\"Carry a running sum across the loop so each position shows progress so far.\"\"\"
+                # TODO: implement using an accumulator pattern
                 raise NotImplementedError
 
 
             def count_vowels(text):
-                \"\"\"Count vowels in the given text, ignoring case.\"\"\"
-                # TODO: implement
+                \"\"\"Count vowels case-insensitively to practice simple string scanning.\"\"\"
+                # TODO: implement using lowercase text and a small vowel set
                 raise NotImplementedError
             """
         ),
@@ -257,20 +258,20 @@ def beginner_decomposition_control() -> None:
         code_cell(
             """
             def bucket_tasks(tasks, bucket_size):
-                \"\"\"Split tasks into equally sized buckets (last bucket may be shorter).\"\"\"
-                # TODO: implement
+                \"\"\"Split tasks into equally sized chunks so work can be batched without changing order.\"\"\"
+                # TODO: implement using slicing in a step loop
                 raise NotImplementedError
 
 
             def simulate_robot(commands):
-                \"\"\"Return the final (x, y) after executing N/E/S/W moves from the origin.\"\"\"
-                # TODO: implement
+                \"\"\"Translate direction letters into x/y moves to track the robot's final position.\"\"\"
+                # TODO: implement with simple if/elif updates to x and y
                 raise NotImplementedError
 
 
             def estimate_timeline(steps):
-                \"\"\"Compute total minutes using the parallelization rules described above.\"\"\"
-                # TODO: implement
+                \"\"\"Separate serial work from parallel work so time adds correctly (serial sum + longest parallel block).\"\"\"
+                # TODO: implement by tracking serial_time and parallel_times
                 raise NotImplementedError
             """
         ),
@@ -383,20 +384,20 @@ def intermediate_data_structures() -> None:
         code_cell(
             """
             def two_sum_indices(nums, target):
-                \"\"\"Return indices (i, j) of two numbers adding to target, or None.\"\"\"
-                # TODO: implement
+                \"\"\"Use a dict for O(1) lookups so we find a pair adding to target in one pass.\"\"\"
+                # TODO: implement using the seen dictionary pattern
                 raise NotImplementedError
 
 
             def word_frequencies(text):
-                \"\"\"Return a dict of word counts, case-insensitive and punctuation-free.\"\"\"
-                # TODO: implement
+                \"\"\"Normalize case/punctuation, then count words to show how preprocessing simplifies logic.\"\"\"
+                # TODO: implement by lowercasing, stripping punctuation, and counting
                 raise NotImplementedError
 
 
             def merge_sorted(left, right):
-                \"\"\"Merge two sorted lists into one sorted list.\"\"\"
-                # TODO: implement
+                \"\"\"Walk both sorted lists with indices to build a single sorted output in linear time.\"\"\"
+                # TODO: implement with two-pointer merge logic
                 raise NotImplementedError
             """
         ),
@@ -505,20 +506,20 @@ def intermediate_recursion_search() -> None:
         code_cell(
             """
             def flatten(nested):
-                \"\"\"Flatten a nested list of integers while preserving order.\"\"\"
-                # TODO: implement
+                \"\"\"Recursively open nested lists so all ints appear in order in a single list.\"\"\"
+                # TODO: implement using recursion and list extension
                 raise NotImplementedError
 
 
             def count_paths(rows, cols):
-                \"\"\"Return the number of paths from (0,0) to (rows-1, cols-1) moving only right or down.\"\"\"
-                # TODO: implement
+                \"\"\"Use the idea 'paths from above + paths from left' to count ways across the grid.\"\"\"
+                # TODO: implement with recursion (optional memo) or DP table
                 raise NotImplementedError
 
 
             def path_exists(grid, start, goal):
-                \"\"\"Return True if a path exists in the grid from start to goal using 4-directional moves.\"\"\"
-                # TODO: implement
+                \"\"\"Search the grid (DFS/BFS) avoiding walls and revisits to see if start can reach goal.\"\"\"
+                # TODO: implement with a stack/queue and visited set
                 raise NotImplementedError
             """
         ),
@@ -638,20 +639,20 @@ def advanced_algorithm_design() -> None:
         code_cell(
             """
             def topological_sort(num_nodes, edges):
-                \"\"\"Return a topo order for the DAG or raise ValueError on cycles.\"\"\"
-                # TODO: implement
+                \"\"\"Apply Kahn's algorithm: peel off indegree-0 nodes to produce a valid ordering or detect a cycle.\"\"\"
+                # TODO: implement with indegree tracking and a queue
                 raise NotImplementedError
 
 
             def shortest_path_grid(grid, start, goal):
-                \"\"\"Return the shortest path length in a 0/1 grid using BFS, or None if unreachable.\"\"\"
-                # TODO: implement
+                \"\"\"Use BFS layers to find the minimum steps from start to goal in an unweighted grid.\"\"\"
+                # TODO: implement with a queue and visited set
                 raise NotImplementedError
 
 
             def schedule_by_deadline(tasks):
-                \"\"\"Order tasks by earliest deadline, breaking ties with shorter duration.\"\"\"
-                # TODO: implement
+                \"\"\"Greedily sort by deadline (then duration) to produce a reasonable execution order quickly.\"\"\"
+                # TODO: implement with a two-key sort and return names
                 raise NotImplementedError
             """
         ),
@@ -775,20 +776,20 @@ def advanced_experiments_evaluation() -> None:
 
 
             def estimate_pi(num_samples, seed=0):
-                \"\"\"Estimate pi using random sampling inside a unit square.\"\"\"
-                # TODO: implement
+                \"\"\"Monte Carlo: sample points, count hits inside quarter-circle, and scale by 4 for a pi estimate.\"\"\"
+                # TODO: implement using the hint steps and random.random()
                 raise NotImplementedError
 
 
             def rolling_mean(window, values):
-                \"\"\"Return a list of rolling means using the last `window` values at each step.\"\"\"
-                # TODO: implement
+                \"\"\"Maintain a small sliding window so each output is the average of the most recent values.\"\"\"
+                # TODO: implement by adding/removing values as you iterate
                 raise NotImplementedError
 
 
             def conversion_lift(visitors):
-                \"\"\"Compute conversion rates for A and B and the lift (B - A).\"\"\"
-                # TODO: implement
+                \"\"\"Count conversions per variant, compute rates, then report lift (rate_B - rate_A).\"\"\"
+                # TODO: implement with basic counters and safe division
                 raise NotImplementedError
             """
         ),
