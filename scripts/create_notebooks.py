@@ -133,19 +133,32 @@ def beginner_python_basics() -> None:
             """
             def clean_temperature_readings(readings):
                 \"\"\"Remove sentinel values and convert the rest to floats to keep only usable data in original order.\"\"\"
-                # TODO: implement following the step-by-step hint above
+                cleaned = []
+                # Step 1: loop through each reading in the incoming list.
+                # Step 2: skip None or -999 since they signal missing data.
+                # Step 3: convert everything else to float and append to cleaned.
+                # Step 4: return cleaned at the end.
                 raise NotImplementedError
 
 
             def running_totals(numbers):
                 \"\"\"Carry a running sum across the loop so each position shows progress so far.\"\"\"
-                # TODO: implement using an accumulator pattern
+                totals = []
+                current_sum = 0
+                # Step 1: for each number, add it to current_sum.
+                # Step 2: append current_sum to totals to capture progress.
+                # Step 3: return totals after the loop.
                 raise NotImplementedError
 
 
             def count_vowels(text):
                 \"\"\"Count vowels case-insensitively to practice simple string scanning.\"\"\"
-                # TODO: implement using lowercase text and a small vowel set
+                vowels = "aeiou"
+                count = 0
+                text = text.lower()
+                # Step 1: loop through each character in text.
+                # Step 2: if the character is in vowels, increment count.
+                # Step 3: return count.
                 raise NotImplementedError
             """
         ),
@@ -259,19 +272,31 @@ def beginner_decomposition_control() -> None:
             """
             def bucket_tasks(tasks, bucket_size):
                 \"\"\"Split tasks into equally sized chunks so work can be batched without changing order.\"\"\"
-                # TODO: implement using slicing in a step loop
+                buckets = []
+                # Step 1: walk through tasks in jumps of bucket_size (range with step).
+                # Step 2: slice tasks[i:i+bucket_size] to form each chunk.
+                # Step 3: append each slice to buckets.
+                # Step 4: return buckets.
                 raise NotImplementedError
 
 
             def simulate_robot(commands):
                 \"\"\"Translate direction letters into x/y moves to track the robot's final position.\"\"\"
-                # TODO: implement with simple if/elif updates to x and y
+                x, y = 0, 0
+                # Step 1: loop over each letter in commands.
+                # Step 2: adjust x or y with if/elif for N/E/S/W.
+                # Step 3: after the loop, return (x, y).
                 raise NotImplementedError
 
 
             def estimate_timeline(steps):
                 \"\"\"Separate serial work from parallel work so time adds correctly (serial sum + longest parallel block).\"\"\"
-                # TODO: implement by tracking serial_time and parallel_times
+                serial_time = 0
+                parallel_times = []
+                # Step 1: loop through steps, adding non-parallel to serial_time.
+                # Step 2: collect times for parallelizable steps in parallel_times.
+                # Step 3: parallel block contribution is max(parallel_times) if any, else 0.
+                # Step 4: total = serial_time + parallel_block.
                 raise NotImplementedError
             """
         ),
@@ -385,19 +410,32 @@ def intermediate_data_structures() -> None:
             """
             def two_sum_indices(nums, target):
                 \"\"\"Use a dict for O(1) lookups so we find a pair adding to target in one pass.\"\"\"
-                # TODO: implement using the seen dictionary pattern
+                seen = {}
+                # Step 1: loop with enumerate to get index and value.
+                # Step 2: compute needed = target - value.
+                # Step 3: if needed is in seen, return (seen[needed], current index).
+                # Step 4: otherwise store current value's index in seen.
+                # Step 5: if no pair found, return None.
                 raise NotImplementedError
 
 
             def word_frequencies(text):
                 \"\"\"Normalize case/punctuation, then count words to show how preprocessing simplifies logic.\"\"\"
-                # TODO: implement by lowercasing, stripping punctuation, and counting
+                counts = {}
+                # Step 1: lowercase text to unify casing.
+                # Step 2: replace punctuation (. , ! ? ; :) with spaces.
+                # Step 3: split on whitespace to get words.
+                # Step 4: loop words and increment counts[word].
                 raise NotImplementedError
 
 
             def merge_sorted(left, right):
                 \"\"\"Walk both sorted lists with indices to build a single sorted output in linear time.\"\"\"
-                # TODO: implement with two-pointer merge logic
+                merged = []
+                i = j = 0
+                # Step 1: while both lists have items, compare left[i] vs right[j].
+                # Step 2: append the smaller and advance that index.
+                # Step 3: when one list is done, extend with the remainder of the other.
                 raise NotImplementedError
             """
         ),
@@ -507,19 +545,26 @@ def intermediate_recursion_search() -> None:
             """
             def flatten(nested):
                 \"\"\"Recursively open nested lists so all ints appear in order in a single list.\"\"\"
-                # TODO: implement using recursion and list extension
+                result = []
+                # Step 1: loop items; if int, append directly.
+                # Step 2: if list, recursively flatten and extend result with that list.
+                # Step 3: return result.
                 raise NotImplementedError
 
 
             def count_paths(rows, cols):
                 \"\"\"Use the idea 'paths from above + paths from left' to count ways across the grid.\"\"\"
-                # TODO: implement with recursion (optional memo) or DP table
+                # Base case: if rows == 1 or cols == 1, only one path.
+                # Recursive idea: count_paths(rows-1, cols) + count_paths(rows, cols-1).
+                # Optional: memoize results in a dict for speed.
                 raise NotImplementedError
 
 
             def path_exists(grid, start, goal):
                 \"\"\"Search the grid (DFS/BFS) avoiding walls and revisits to see if start can reach goal.\"\"\"
-                # TODO: implement with a stack/queue and visited set
+                # Idea: use a stack/queue for positions to explore and a visited set.
+                # Explore neighbors (up, down, left, right) that are inside bounds and open (0).
+                # Return True on reaching goal; False if search finishes without it.
                 raise NotImplementedError
             """
         ),
@@ -640,19 +685,27 @@ def advanced_algorithm_design() -> None:
             """
             def topological_sort(num_nodes, edges):
                 \"\"\"Apply Kahn's algorithm: peel off indegree-0 nodes to produce a valid ordering or detect a cycle.\"\"\"
-                # TODO: implement with indegree tracking and a queue
+                # Step 1: build indegree counts for each node.
+                # Step 2: queue all nodes with indegree 0.
+                # Step 3: pop from queue, add to ordering, decrement neighbors' indegrees.
+                # Step 4: push new indegree-0 neighbors to queue.
+                # Step 5: if ordering length == num_nodes, return it; else raise ValueError for a cycle.
                 raise NotImplementedError
 
 
             def shortest_path_grid(grid, start, goal):
                 \"\"\"Use BFS layers to find the minimum steps from start to goal in an unweighted grid.\"\"\"
-                # TODO: implement with a queue and visited set
+                # Step 1: queue holds (position, distance); start at distance 0.
+                # Step 2: while queue not empty, pop; if goal, return distance.
+                # Step 3: add valid, not-yet-visited open neighbors with distance+1.
+                # Step 4: return None if queue empties without reaching goal.
                 raise NotImplementedError
 
 
             def schedule_by_deadline(tasks):
                 \"\"\"Greedily sort by deadline (then duration) to produce a reasonable execution order quickly.\"\"\"
-                # TODO: implement with a two-key sort and return names
+                # Step 1: sort tasks by (deadline, duration).
+                # Step 2: return a list of task names in that sorted order.
                 raise NotImplementedError
             """
         ),
@@ -777,19 +830,30 @@ def advanced_experiments_evaluation() -> None:
 
             def estimate_pi(num_samples, seed=0):
                 \"\"\"Monte Carlo: sample points, count hits inside quarter-circle, and scale by 4 for a pi estimate.\"\"\"
-                # TODO: implement using the hint steps and random.random()
+                # Step 1: set the random seed for reproducibility.
+                # Step 2: loop num_samples times, sampling x, y in [0, 1).
+                # Step 3: count when x*x + y*y <= 1 (inside quarter-circle).
+                # Step 4: fraction_inside * 4 approximates pi; return that.
                 raise NotImplementedError
 
 
             def rolling_mean(window, values):
                 \"\"\"Maintain a small sliding window so each output is the average of the most recent values.\"\"\"
-                # TODO: implement by adding/removing values as you iterate
+                recent = []
+                means = []
+                # Step 1: iterate through values, appending each to recent.
+                # Step 2: if recent is longer than window, drop the oldest (index 0).
+                # Step 3: compute mean of recent and append to means.
+                # Step 4: return means.
                 raise NotImplementedError
 
 
             def conversion_lift(visitors):
                 \"\"\"Count conversions per variant, compute rates, then report lift (rate_B - rate_A).\"\"\"
-                # TODO: implement with basic counters and safe division
+                # Step 1: track totals and conversions for A and B separately.
+                # Step 2: compute rate_A and rate_B (protect against divide-by-zero if needed).
+                # Step 3: lift = rate_B - rate_A.
+                # Step 4: return a dict with rate_A, rate_B, lift.
                 raise NotImplementedError
             """
         ),
