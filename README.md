@@ -91,7 +91,11 @@ Notebook conventions
 --------------------
 - Every notebook starts with a short overview and a setup cell that imports `utils.validation`.
 - Tasks include structured TODOs; write your code below the prompt.
-- A dedicated "Run tests" cell checks your work. Tests are intentionally small so you can add more cases as you learn.
+- **NEW:** Each task now has its own code cell and test cell, giving you immediate feedback after completing each accomplishment!
+  - Task 1 → Code → Test → Task 2 → Code → Test → Task 3 → Code → Test
+  - This progressive structure helps you build confidence step-by-step
+  - You can see your progress clearly (1 of 3 done, 2 of 3 done, etc.)
+- Tests are intentionally small so you can add more cases as you learn.
 - Feel free to duplicate a notebook (e.g., `01_python_basics_solutions.ipynb`) to preserve your first attempt.
 
 Extending the curriculum
